@@ -83,6 +83,8 @@ Rules:
 	ts|rules/trees.yaml
 	ts|rules/bridges.yaml
     shroobs|rules/world.yaml
+    shroobs|rules/shared-structures.yaml
+    shroobs|rules/shrb-structures.yaml
 
 Weapons:
 	ts|weapons/ballisticweapons.yaml
@@ -104,6 +106,7 @@ Sequences:
 	ts|sequences/trees.yaml
 	ts|sequences/bridges.yaml
 	ts|sequences/critters.yaml
+    shroobs|sequences/structures.yaml
 
 ModelSequences:
 	ts|sequences/voxels.yaml

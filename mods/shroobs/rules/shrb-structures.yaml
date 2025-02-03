@@ -1,0 +1,42 @@
+SAPOWR:
+    Inherits: ^Building
+    Inherits@SHAPE: ^2x2Shape
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 10
+        Prerequisites: ~structures.shrb, ~techlevel.low
+        Description: Provides power for other structures.
+    Valued:
+        Cost: 300
+    Tooltip:
+        Name: Shroob Power Plant
+    ProvidesPrerequisite:
+        Prerequisite: anypower
+    Building:
+        Footprint: xx xx
+        Dimensions: 2,2
+    Health:
+        HP: 75000
+    Armor:
+        Type: Wood
+    RevealsShroud:
+        Range: 4c0
+        MaxHeightDelta: 3
+    WithIdleOverlay@LIGHTS:
+        RequiresCondition: !build-incomplete && !empdisable
+        Sequence: idle-lights
+        Palette: player-nobright
+        IsPlayerPalette: True
+    WithIdleOverlay@LIGHTS-BRIGHT:
+        RequiresCondition: !build-incomplete && !empdisable
+        Sequence: idle-lights-bright
+        Palette: bright
+    Power:
+        Amount: 100
+        RequiresCondition: !empdisable
+    Targetable:
+        TargetTypes: Ground, Building, C4, SpyInfiltrate
+    ScalePowerWithHealth:
+    PowerTooltip:
+    IsometricSelectable:
+        Height: 48

@@ -1,0 +1,4 @@
+GACNST:
+    ProvidesPrerequisite@shrb:
+        Factions: shrb
+        Prerequisite: structures.shrb
