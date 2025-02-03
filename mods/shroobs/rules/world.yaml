@@ -2,7 +2,7 @@
     Faction@2:
         Name: Shroobs
         InternalName: shrb
-        Description: The Shroobs\nThe Shroobs are an alien race that thrive on the\n alien substance Tiberium. They utilize highly\nmobile and reconfigurable multi-purpose units\nfor a nomadic approach to warfare.
+        Description: The Shroobs\nThe Shroobs are an alien race that thrive on the\nalien substance Tiberium. They utilize highly\nmobile and reconfigurable multi-purpose units\nfor a nomadic approach to warfare.
 
 World:
     StartingUnits@MCV:
