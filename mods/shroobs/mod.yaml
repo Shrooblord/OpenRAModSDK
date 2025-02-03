@@ -82,8 +82,7 @@ Rules:
 	ts|rules/shared-vehicles.yaml
 	ts|rules/trees.yaml
 	ts|rules/bridges.yaml
-    shroobs|rules.yaml
-#    shroobs|rules/world.yaml
+    shroobs|rules/world.yaml
 
 Weapons:
 	ts|weapons/ballisticweapons.yaml
@@ -94,7 +93,6 @@ Weapons:
 	ts|weapons/otherweapons.yaml
 	ts|weapons/smallguns.yaml
 	ts|weapons/superweapons.yaml
-#    shroobs|rules/weapons.yaml
 
 Sequences:
 	ts|sequences/aircraft.yaml
