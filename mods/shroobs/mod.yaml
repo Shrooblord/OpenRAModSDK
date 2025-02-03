@@ -12,8 +12,8 @@ Packages:
 	~^SupportDir|Content/ts/firestorm
 	^EngineDir
 	$ts: ts
-    $shroobs: shroobs
 	^EngineDir|mods/common: common
+    $shroobs: shroobs
 
 	# Tiberian Sun
 	~scores.mix
@@ -82,8 +82,8 @@ Rules:
 	ts|rules/shared-vehicles.yaml
 	ts|rules/trees.yaml
 	ts|rules/bridges.yaml
-#    shroobs|rules/rules.yaml
-    shroobs|rules/world.yaml
+    shroobs|rules.yaml
+#    shroobs|rules/world.yaml
 
 Weapons:
 	ts|weapons/ballisticweapons.yaml
