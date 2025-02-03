@@ -125,6 +125,7 @@ Cursors:
 
 Chrome:
 	ts|chrome.yaml
+    shroobs|chrome/chrome.yaml
 
 Assemblies:
 	^BinDir|OpenRA.Mods.Common.dll
