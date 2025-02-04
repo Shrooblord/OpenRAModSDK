@@ -50,6 +50,7 @@ Packages:
 	~ecache01.mix
 	ts|bits
 	ts|uibits
+    shroobs|uibits
 
 MapFolders:
 	ts|maps: System

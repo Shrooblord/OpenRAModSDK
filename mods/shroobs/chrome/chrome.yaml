@@ -1,6 +1,11 @@
+^Glyphs:
+    Image: glyphs-shrb.png
+    Image2x: glyphs-shrb-2x.png
+    Image3x: glyphs-shrb-3x.png
+
 flags:
     Regions:
-        shrb: 226, 225, 30, 15
+        shrb: 226, 193, 30, 15
 
 
 # ----------------------------------------------------------------------
