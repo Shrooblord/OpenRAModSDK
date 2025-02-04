@@ -1,5 +1,9 @@
+^SHROOB:
+    Inherits: ^HealsOnTiberium
+
 OVSR:
     Inherits: ^Infantry
+    Inherits@2: ^SHROOB
     Inherits@selection: ^SelectableSupportUnit
     Buildable:
         Queue: Infantry
@@ -40,6 +44,7 @@ OVSR:
 
 EXTR:
     Inherits: ^Infantry
+    Inherits@2: ^SHROOB
     Inherits@selection: ^SelectableEconomicUnit
     Valued:
         Cost: 1400
