@@ -1,0 +1,36 @@
+1. Use https://github.com/obrakmann/openra-fuel to create "fuel" for the Shroobs
+
+2. The Overseer can psionically control other Shroobs within its area of influence -- it is using `RefuelsUnitsNear` in order to supply them with """psi juice"""
+  A. If units are outside of the Overseer's range, they quickly run out out psi juice
+  B. Units that are out of psi juice start accumulating Wither stacks, up to some maximum that is configurable per-unit
+  C. Halfway to a unit's maximum Wither stacks, they become Starved; their movement speed falls dramatically, and they do reduced damage
+  D. Near the maximum Wither stacks, a unit becomes effectively EMP-disabled
+  E. At maximum Wither stacks, the unit dies and becomes a Husk. Husks (left behind by any player) can be reclaimed for resources or resurrected with specialist units
+  F. If a unit is ever within the range of an Overseer's life-giving psi aura, it quickly heals from its Wither stacks and becomes fully functional again
+  G. You can imagine a wide range of "classes" in how long a Shroob can be outside of an Overseer's aura;
+    i.   small, weak types may have small psi stores and a small max stack count for Wither; i.e. they die very quickly when outside of psi range;
+	ii.  lumbering titans may have huge psi stores;
+	iii. some units might have small psi stores and so start stacking Wither fast, but huge max for Wither, so be able to suffer for longer before falling;
+	iv.  others might have large psi stores but once they run out, die quickly.
+  H. The Overseer is hungry too: it directly consumes Tiberium collected by Extractors in order to refuel its store of psi aura-generating energy. Maybe use the actual Power bar used to power Buildings of other Factions for this.
+  I. The more units an Overseer has to supply psi juice to, the quicker its own stores run out.
+    i.   This creates an interesting dynamic where you have to balance the ever-mounting needs of an escalating RTS war machine with your ability to harvest enough Tiberium quickly enough to feed all your Overseers enough so they don't start starving themselves. Because you better believe your army will fall quickly if a local Overseer bites the dust. And of course, you lose the game if you lose your last Overseer.
+	ii.  The Extractor requires psi juice to work, and in turn harvests Tiberium to give to the Overseer so it can generate psi juice....... an interesting interaction!
+	iii. This balancing act not only empowers the nomadic playstyle of the Shroobs; but it actually requires it. You will scour the lands, destroying Tiberium fields to feed your ever-ravenous swarm.
+	
+3. Extractors have a balancing act of their own: how much Tiberium they collect and siphon off to their Overseer, and how much they use for the internal process of creating new Collectors.
+  A. More Collectors means higher Tiberium harvesting speed and more flexibility (some might be harvesting this field, others running off to that one, others reclaiming the spoils of Infestation...).
+  B. They're also more mouths to feed with psi juice, though they are some of the least hungry units in the Faction.
+  C. They do also pop like nobody's business though; they can only last a couple seconds outside of psi range.
+  D. Because they operate independently, and constantly keeping an eye on your Harvesters isn't fun (there's a reason these units are some of the only fully automated units in the game), the Extractor actually has a small psi beacon of its own, dedicated solely to supplying its Collectors. This beacon is in fact infinite range (unlike the Overseer's), but the further a Collector goes outside of its parent's support aura, the more psi juice in upkeep it requires per tick.
+  E. Extractors require psi juice from the Overseer to survive and receive direct commands, but they can operate relatively independently on their own just fine since they convert Tiberium to psi juice internally for directing their Collectors. When out of range of an Overseer, their Tiberium consumption goes up, since now they're feeding themselves as well.
+  F. On top of that, they don't supply the Overseer with refined Tiberium, which means it itself might start starving. This is terrible!!
+  G. This is a double-edged sword: you're effectively losing resources to build and maintain your armies with if your Extractors are out of range of the Overseer for too long; but the indepence gained and strain of maintaining Collectors offloaded to the Extractors is very beneficial for a Shroob hive.
+
+4. Infesting. Shroobs can corrupt other living entities with and break down constructions into Tiberium.
+  A. This allows them to deal massive damage while also supplying themselves with more food! Special units can cause Infestation to begin, after which a Tiberium Outbreak will occur naturally in some time.
+  B. But they can also accelerate the condition of an already infested target, sometimes even supercharging the Infestation and causing them to errupt in a terrible Tiberium Flower, spawning a new Tiberium field and potentially infecting nearby biologicals.
+  C. Natural sources of contact with Tiberium (such as walking over a field) may cause Infestation too, though the chance for this is way lower.
+  D. Infestation may rarely go awry and result in Mutants instead. Mutants are immune to Tiberium damage and have upgraded combat prowess; giving a Mutant into the hands of your enemy is bad news for you! There are upgrades to reduce the likelihood of this somewhat, though there will always be a chance for mutation when Infesting an enemy soldier.
+  
+5. Bio-hacking. Like the NOD Avatar from Tiberium Wars, a special Shroob unit can assimilate traits from other units into itself. Unlike the Avatar, which has limited upgrade potential and exclusively vehicles, the bio-hacker can incorporate living organisms into itself. Each new type unlocks a specific new ability. Each following specimen of that type adds to the bonus this ability gives (with diminishing returns) until you have a formidable foe to face in the bio-hacker.

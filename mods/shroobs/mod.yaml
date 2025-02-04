@@ -222,7 +222,7 @@ Hotkeys:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: ts|uibits/loadscreen.png
-	Text: Updating EVA installation..., Changing perspective...
+	Text: Updating EVA installation..., Changing perspective..., Receiving transmission..., Establishing battle control..., Welcoming commanders..., Harvesting Tiberium..., Awaiting orders..., Acquiring new lands..., Powering peace..., Embracing destiny..., Reclaiming..., Initiating global defence...
 
 ServerTraits:
 	LobbyCommands
