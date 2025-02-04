@@ -10,7 +10,7 @@ trim_trailing_whitespace = true
 
 ; 4-column tab indentation
 [*.{cs,csproj,yaml,lua,sh,ps1}]
-indent_style = tab
+indent_style = space
 indent_size = 4
 
 ; .NET coding conventions
