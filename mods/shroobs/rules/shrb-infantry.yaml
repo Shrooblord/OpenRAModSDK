@@ -1,0 +1,101 @@
+OVSR:
+    Inherits: ^Infantry
+    Inherits@selection: ^SelectableSupportUnit
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 160
+        Prerequisites: ~barracks, tech, ~techlevel.medium
+        Description: Control centre for local Shroob forces.\n  Unarmed
+    Valued:
+        Cost: 2500
+    Tooltip:
+        Name: Overseer
+    Selectable:
+        DecorationBounds: 1267, 2534
+    Health:
+        HP: 100000
+    Armor:
+        Type: Heavy
+    Mobile:
+        Speed: 42
+    RevealsShroud:
+        RequiresCondition: !inside-tunnel
+        Range: 6c0
+        MaxHeightDelta: 3
+    MustBeDestroyed:
+        RequiredForShortGame: true
+    BaseBuilding:
+    Transforms:
+        PauseOnCondition: empdisable || being-captured
+        IntoActor: gacnst
+        Offset: -1,-1
+        Facing: 384
+        TransformSounds: place2.aud
+        NoTransformSounds:
+        Voice: Move
+        NoTransformNotification: BuildingCannotPlaceAudio
+        NoTransformTextNotification: Cannot deploy here.
+    RenderSprites:
+        Image: CYC2
+
+EXTR:
+    Inherits: ^Infantry
+    Inherits@selection: ^SelectableEconomicUnit
+    Valued:
+        Cost: 1400
+    Tooltip:
+        Name: Extractor
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 10
+        Prerequisites: ~barracks, proc, ~techlevel.low
+        Description: Collects Tiberium for processing.\n  Unarmed
+    Selectable:
+        Bounds: 1086, 2172
+        DecorationBounds: 1086, 2172
+    Harvester:
+        DeliveryBuildings: proc
+        Capacity: 28
+        Resources: Tiberium, BlueTiberium
+        BaleLoadDelay: 15
+        BaleUnloadDelay: 15
+        FullyLoadedSpeed: 100
+        SearchFromProcRadius: 36
+        SearchFromHarvesterRadius: 18
+        HarvestVoice: Attack
+        DeliverVoice: Move
+        EmptyCondition: no-tiberium
+    Mobile:
+        Speed: 71
+    Health:
+        HP: 100000
+    ChangesHealth:
+        Step: 500
+        Delay: 10
+        StartIfBelow: 50
+        DamageCooldown: 200
+    Armor:
+        Type: Heavy
+    RevealsShroud:
+        RequiresCondition: !inside-tunnel
+        Range: 4c0
+        MaxHeightDelta: 3
+    Explodes:
+        RequiresCondition: !no-tiberium
+        Weapon: TiberiumExplosion
+    WithHarvestOverlay:
+        LocalOffset: 543,0,0
+        Palette: effect
+    RenderSprites:
+        Image: extr
+    WithHarvesterPipsDecoration:
+        Position: BottomLeft
+        RequiresSelection: true
+        Margin: 5, 2
+        PipCount: 7
+        Palette: pips
+        ResourceSequences:
+            Tiberium: pip-green
+            BlueTiberium: pip-blue
+    WithDecoration@UNDERGROUND:
+        Sequence: harvester

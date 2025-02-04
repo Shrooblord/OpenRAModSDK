@@ -1,0 +1,11 @@
+ovsr:
+    icon:
+        Filename: sidebar-nod|mcvicon.shp
+
+extr:
+    Inherits: cyborg
+    harvest:
+        Filename: harvestr.shp
+        Length: *
+        ZRamp: 1
+        Offset: 0, 0, 1

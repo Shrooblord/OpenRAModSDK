@@ -86,6 +86,7 @@ Rules:
     shroobs|rules/world.yaml
     shroobs|rules/shared-structures.yaml
     shroobs|rules/shrb-structures.yaml
+    shroobs|rules/shrb-infantry.yaml
 
 Weapons:
 	ts|weapons/ballisticweapons.yaml
@@ -108,6 +109,7 @@ Sequences:
 	ts|sequences/bridges.yaml
 	ts|sequences/critters.yaml
     shroobs|sequences/structures.yaml
+    shroobs|sequences/infantry.yaml
 
 ModelSequences:
 	ts|sequences/voxels.yaml
