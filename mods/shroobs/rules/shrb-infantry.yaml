@@ -93,6 +93,7 @@ EXTR:
         Palette: effect
     RenderSprites:
         Image: extr
+    WithSpriteBody:
     WithHarvesterPipsDecoration:
         Position: BottomLeft
         RequiresSelection: true

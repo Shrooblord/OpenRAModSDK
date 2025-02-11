@@ -1,11 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-<!--	<ItemGroup>-->
-<!--		<ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">-->
-<!--			<Private>False</Private>-->
-<!--		</ProjectReference>-->
-<!--	</ItemGroup>-->
-
 	<PropertyGroup>
 		<EngineRootPath>../engine</EngineRootPath>
 		<LangVersion>12</LangVersion>
@@ -22,16 +16,18 @@
 			<Private>False</Private>
 		</ProjectReference>
 	</ItemGroup>
-	
+    
 	<ItemGroup>
-		<Folder Include="Traits"/>
+		<Folder Include="Traits\"/>
 	</ItemGroup>
 	
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
-<!--        <ImplicitUsings>enable</ImplicitUsings>-->
         <Nullable>enable</Nullable>
         <LangVersion>12</LangVersion>
+        <OutputType>Library</OutputType>
+        <RootNamespace>OpenRA.Mods.Shroobs</RootNamespace>
+        <AssemblyName>OpenRA.Mods.Shroobs</AssemblyName>
     </PropertyGroup>
 
 </Project>
