@@ -107,3 +107,19 @@ EXTR:
     WithDecoration@UNDERGROUND:
         Sequence: harvester
     MobileRefinery:
+    StoresResources:
+        Capacity: 2000
+    #GrantConditionOnPlayerResources:
+    #    Condition: contains-tiberium
+    #Explodes@2:
+    #    RequiresCondition: contains-tiberium
+    #    Weapon: TiberiumExplosion
+    WithResourceStoragePipsDecoration:
+        Position: BottomLeft
+        RequiresSelection: true
+        Margin: 8, 10
+        FullSequence: pip-green-building
+        EmptySequence: pip-empty-building
+        PipStride: 0, -4
+        PipCount: 9
+        Palette: pips

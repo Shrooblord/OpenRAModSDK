@@ -25,4 +25,6 @@ namespace OpenRA.Mods.Shroobs.Traits
     {
         readonly Actor self = self;
     }
+
+    // @todo: create AllowSelfDock Trait: allows for a MobileRefinery that is also a Harvester to Dock with itself
 }
