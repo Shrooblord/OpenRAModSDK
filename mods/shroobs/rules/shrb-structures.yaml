@@ -1,3 +1,36 @@
+SACNST:
+    Inherits: GACNST
+    ProvidesPrerequisite@shrb:
+        Factions: shrb
+        Prerequisite: structures.shrb
+    Transforms:
+        RequiresCondition: factundeploy
+        PauseOnCondition: empdisable || being-demolished || build-incomplete
+        IntoActor: ovsr
+        Offset: 1,1
+        Facing: 384
+        DeployCursor: undeploy
+    Refinery:
+        DockAngle: 640
+        DockOffset: 2,1
+        DiscardExcessResources: true
+    StoresResources:
+        Capacity: 2000
+    GrantConditionOnPlayerResources:
+        Condition: contains-tiberium
+    Explodes:
+        RequiresCondition: contains-tiberium
+        Weapon: TiberiumExplosion
+    WithResourceStoragePipsDecoration:
+        Position: BottomLeft
+        RequiresSelection: true
+        Margin: 8, 2
+        FullSequence: pip-green-building
+        EmptySequence: pip-empty-building
+        PipStride: 4, 2
+        PipCount: 25
+        Palette: pips
+
 SAPOWR:
     Inherits: NAPOWR
     Buildable:

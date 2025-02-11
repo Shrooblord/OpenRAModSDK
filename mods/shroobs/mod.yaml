@@ -84,7 +84,6 @@ Rules:
 	ts|rules/trees.yaml
 	ts|rules/bridges.yaml
     shroobs|rules/world.yaml
-    shroobs|rules/shared-structures.yaml
     shroobs|rules/shrb-structures.yaml
     shroobs|rules/shrb-infantry.yaml
 

@@ -4,6 +4,7 @@ ovsr:
 
 extr:
     Inherits: cyborg
+    #rm idle once MobileRefinery has decoupled its reliance on WithSpriteBody
     idle:
         Start: 56
         Length: 15

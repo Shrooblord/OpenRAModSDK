@@ -93,6 +93,7 @@ EXTR:
         Palette: effect
     RenderSprites:
         Image: extr
+    #rm WithSpriteBody once we rip out the necessity for rendering a sprite on MobileRefinery
     WithSpriteBody:
     WithHarvesterPipsDecoration:
         Position: BottomLeft
