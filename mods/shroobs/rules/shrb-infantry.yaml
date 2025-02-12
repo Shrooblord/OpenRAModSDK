@@ -53,25 +53,29 @@ EXTR:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 10
-        Prerequisites: ~barracks, proc, ~techlevel.low
+        Prerequisites: ~barracks, saproc, ~techlevel.low
         Description: Collects Tiberium for processing.\n  Unarmed
     Selectable:
         Bounds: 1086, 2172
         DecorationBounds: 1086, 2172
+    FreeActor:
+        Actor: COLL
+        SpawnOffset: 2,1
+        Facing: 640
     Harvester:
-        DeliveryBuildings: proc
+        DeliveryBuildings: proc, saproc, sacnst
         Capacity: 28
         Resources: Tiberium, BlueTiberium
         BaleLoadDelay: 15
         BaleUnloadDelay: 15
-        FullyLoadedSpeed: 100
+        FullyLoadedSpeed: 50
         SearchFromProcRadius: 36
         SearchFromHarvesterRadius: 18
         HarvestVoice: Attack
         DeliverVoice: Move
         EmptyCondition: no-tiberium
     Mobile:
-        Speed: 71
+        Speed: 51
     Health:
         HP: 100000
     ChangesHealth:
@@ -107,6 +111,9 @@ EXTR:
     WithDecoration@UNDERGROUND:
         Sequence: harvester
     MobileRefinery:
+        #DockAngle: 640
+        DockOffset: 2,2
+        DiscardExcessResources: true
     StoresResources:
         Capacity: 2000
     #GrantConditionOnPlayerResources:
@@ -123,3 +130,66 @@ EXTR:
         PipStride: 0, -4
         PipCount: 9
         Palette: pips
+
+COLL:
+    Inherits: ^Infantry
+    Inherits@2: ^SHROOB
+    Inherits@selection: ^SelectableEconomicUnit
+    Valued:
+        Cost: 200
+    Tooltip:
+        Name: Collector
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 10
+        Prerequisites: ~barracks, saproc, ~techlevel.low
+        Description: Collects Tiberium for processing.\n  Unarmed
+    Selectable:
+        Bounds: 1086, 2172
+        DecorationBounds: 1086, 2172
+    Harvester:
+        DeliveryBuildings: extr
+        Capacity: 7
+        Resources: Tiberium, BlueTiberium
+        BaleLoadDelay: 15
+        BaleUnloadDelay: 15
+        FullyLoadedSpeed: 100
+        SearchFromProcRadius: 36
+        SearchFromHarvesterRadius: 18
+        HarvestVoice: Attack
+        DeliverVoice: Move
+        EmptyCondition: no-tiberium
+        MaxUnloadQueue: 8
+    Mobile:
+        #Speed: 71
+        Speed: 180
+    Health:
+        HP: 1000
+    ChangesHealth:
+        Step: 500
+        Delay: 10
+        StartIfBelow: 50
+        DamageCooldown: 200
+    Armor:
+        Type: Light
+    RevealsShroud:
+        RequiresCondition: !inside-tunnel
+        Range: 4c0
+        MaxHeightDelta: 3
+    Explodes:
+        RequiresCondition: !no-tiberium
+        Weapon: TiberiumExplosion
+    WithHarvestOverlay:
+        LocalOffset: 543,0,0
+        Palette: effect
+    WithHarvesterPipsDecoration:
+        Position: BottomLeft
+        RequiresSelection: true
+        Margin: 5, 2
+        PipCount: 7
+        Palette: pips
+        ResourceSequences:
+            Tiberium: pip-green
+            BlueTiberium: pip-blue
+    WithDecoration@UNDERGROUND:
+        Sequence: harvester

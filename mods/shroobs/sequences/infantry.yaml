@@ -14,3 +14,11 @@ extr:
         Length: *
         ZRamp: 1
         Offset: 0, 0, 1
+
+coll:
+    Inherits: cyc2
+    harvest:
+        Filename: harvestr.shp
+        Length: *
+        ZRamp: 1
+        Offset: 0, 0, 1

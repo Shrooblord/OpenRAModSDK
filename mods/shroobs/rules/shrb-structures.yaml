@@ -12,7 +12,7 @@ SACNST:
         DeployCursor: undeploy
     Refinery:
         DockAngle: 640
-        DockOffset: 2,1
+        DockOffset: 3,1
         DiscardExcessResources: true
     StoresResources:
         Capacity: 2000
@@ -33,6 +33,8 @@ SACNST:
 
 SAPOWR:
     Inherits: NAPOWR
+    Valued:
+        Cost: 50
     Buildable:
         Queue: Building
         BuildPaletteOrder: 10
@@ -40,3 +42,77 @@ SAPOWR:
         Description: Provides power for other structures.
     Tooltip:
         Name: Shroob Power Plant
+
+SAPROC:
+    Inherits: ^Building
+    Inherits@SHAPE: ^4x3FactoryWithBibShape
+    Valued:
+        Cost: 50
+    Tooltip:
+        Name: Shroob Tiberium Refinery
+    Buildable:
+        Queue: Building
+        BuildPaletteOrder: 30
+        Prerequisites: anypower, ~techlevel.low
+        Description: Processes raw Tiberium\ninto useable resources.
+    Building:
+        Footprint: xxX+ xx++ xxX+
+        Dimensions: 4,3
+    Health:
+        HP: 90000
+    RevealsShroud:
+        Range: 6c0
+        MaxHeightDelta: 3
+    Refinery:
+        DockAngle: 640
+        DockOffset: 2,1
+        DiscardExcessResources: true
+    StoresResources:
+        Capacity: 2000
+    CustomSellValue:
+        Value: 600
+    FreeActor:
+        Actor: EXTR
+        SpawnOffset: 2,1
+        Facing: 640
+    WithIdleOverlay@LIGHTS:
+        RequiresCondition: !build-incomplete
+        Sequence: idle-lights
+        Palette: player-nobright
+        IsPlayerPalette: True
+    WithIdleOverlay@LIGHTS-BRIGHT:
+        RequiresCondition: !build-incomplete
+        Sequence: idle-lights-bright
+        Palette: bright
+    WithIdleOverlay@BIB:
+        RequiresCondition: !build-incomplete
+        Sequence: bib
+    WithDockedOverlay@FLAME:
+        RequiresCondition: !build-incomplete
+        Sequence: flame
+        Palette: effect
+    WithDockingOverlay@UNLOAD:
+        RequiresCondition: !build-incomplete
+    Power:
+        Amount: -30
+    ProvidesPrerequisite@buildingname:
+    RenderSprites:
+        Image: proc.gdi
+        FactionImages:
+            gdi: proc.gdi
+            nod: proc.nod
+            shrb: proc.nod
+    GrantConditionOnPlayerResources:
+        Condition: contains-tiberium
+    Explodes:
+        RequiresCondition: contains-tiberium
+        Weapon: TiberiumExplosion
+    WithResourceStoragePipsDecoration:
+        Position: BottomLeft
+        RequiresSelection: true
+        Margin: 8, 2
+        FullSequence: pip-green-building
+        EmptySequence: pip-empty-building
+        PipStride: 4, 2
+        PipCount: 25
+        Palette: pips
