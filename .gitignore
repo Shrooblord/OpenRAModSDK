@@ -1,5 +1,12 @@
 user.config
-engine
+/engine/**
+
+# Modified Engine Files
+!/engine/**/
+!/engine/OpenRA.Game/Game.cs
+!/engine/OpenRA.Mods.Common/Activities/DeliverResources.cs
+!/engine/OpenRA.Mods.Common/Traits/Harvester.cs
+!/engine/OpenRA.Mods.Common/Traits/Buildings/Refinery.cs
 
 # Visual Studio
 Release
