@@ -351,6 +351,7 @@ namespace OpenRA
 			Log.AddChannel("geoip", "geoip.log");
 			Log.AddChannel("nat", "nat.log");
 			Log.AddChannel("client", "client.log");
+			Log.AddChannel("shroob", "shroob.log");
 
 			var platforms = new[] { Settings.Game.Platform, "Default", null };
 			foreach (var p in platforms)

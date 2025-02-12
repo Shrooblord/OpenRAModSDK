@@ -61,8 +61,23 @@ namespace OpenRA.Mods.Common.Activities
 
 			proc = harv.LinkedProc;
 			var iao = proc.Trait<IAcceptResources>();
+			var r = proc.Trait<Refinery>().DockRadius;
+			var closeEnoughToDock = false;
 
-			if (self.CenterPosition != iao.DeliveryPosition)
+			if (r > WDist.Zero)
+			{
+				var actorsNearProc = proc.World.FindActorsInCircle(iao.DeliveryPosition, r).Where(a => a.Equals(self));
+				if (actorsNearProc.Contains(self))
+				{
+					closeEnoughToDock = true;
+				}
+			}
+			else if (self.CenterPosition == iao.DeliveryPosition)
+			{
+				closeEnoughToDock = true;
+			}
+
+			if (!closeEnoughToDock)
 			{
 				foreach (var n in notifyHarvesterActions)
 					n.MovingToRefinery(self, proc);

@@ -29,6 +29,9 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Docking cell relative to top-left cell.")]
 		public readonly CVec DockOffset = CVec.Zero;
 
+		[Desc("How close to the docking cell do we need to be to initiate docking?")]
+		public readonly int DockRadius = 0;
+
 		[Desc("Does the refinery require the harvester to be dragged in?")]
 		public readonly bool IsDragRequired = false;
 
@@ -71,6 +74,7 @@ namespace OpenRA.Mods.Common.Traits
 
 		public bool AllowDocking => !preventDock;
 		public WPos DeliveryPosition => self.World.Map.CenterOfCell(self.Location + info.DockOffset);
+		public WDist DockRadius => new(info.DockRadius);
 		public WAngle DeliveryAngle => info.DockAngle;
 		public bool IsDragRequired => info.IsDragRequired;
 		public WVec DragOffset => info.DragOffset;

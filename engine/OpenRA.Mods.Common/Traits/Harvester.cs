@@ -156,8 +156,9 @@ namespace OpenRA.Mods.Common.Traits
 			base.Created(self);
 		}
 
-		public void LinkProc(Actor proc)
+		public void LinkProc(Actor proc, Actor self = null)
 		{
+			if (self != null) Log.Write("shroob", self + ": LinkProc: LinkedProc=" + proc);
 			LinkedProc = proc;
 		}
 
@@ -170,7 +171,7 @@ namespace OpenRA.Mods.Common.Traits
 		public void ChooseNewProc(Actor self, Actor ignore)
 		{
 			LastLinkedProc = null;
-			LinkProc(ClosestProc(self, ignore));
+			LinkProc(ClosestProc(self, ignore), self);
 		}
 
 		bool IsAcceptableProcType(Actor proc)

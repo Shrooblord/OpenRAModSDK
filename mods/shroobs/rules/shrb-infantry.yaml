@@ -113,6 +113,7 @@ EXTR:
     MobileRefinery:
         #DockAngle: 640
         DockOffset: 2,2
+        DockRadius: 5000
         DiscardExcessResources: true
     StoresResources:
         Capacity: 2000
